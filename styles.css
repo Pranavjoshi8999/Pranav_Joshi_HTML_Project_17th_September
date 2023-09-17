@@ -1,0 +1,135 @@
+.scaleX-hover {
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+  transform-origin: center bottom;
+}
+
+.scaleX-hover:hover {
+  transform: scaleX(1.1);
+}
+
+.lifted-text {
+  color: #ee2f63;
+  perspective: 1000px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.lifted-text:hover {
+  transform: rotateX(20deg) translateZ(10px);
+  color: black;
+}
+
+.list-item {
+  padding: 10px;
+  background: linear-gradient(to right, transparent 50%, #333 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s;
+}
+
+.list-item:hover {
+  background-position: 0 0;
+}
+
+.custom-button {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #ee2f63;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button::before {
+  content: "Only 4 rooms left";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee2f63;
+  color: white;
+  transition: top 0.3s ease-in-out;
+}
+
+.custom-button:hover::before {
+  top: 0;
+}
+
+#votes {
+  color: white;
+  background-color: #ee2f63;
+  width: 10%;
+}
+
+#hotel-images {
+  height: 25%; width: 100%;
+}
+
+#book-now {
+  right: 0;top:60%; width: 20%;
+}
+aside {
+  background-color: #333333;
+  min-height: 100vh;
+}
+#modal-book-now {
+  display: none;
+}
+
+#nav-search{
+  width: 50%;
+}
+
+#before-md {
+ display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  #votes {
+    width: 100%;
+  }
+  #hotel-images{
+    height: 40vh;
+  }
+  #book-now {
+    display: none;
+  }
+  #modal-book-now {
+    display: block;
+  }
+  #nav-search{
+    width: 100%;
+  }
+   #before-md {
+    display: block;
+   }
+   #after-md {
+    display: none;
+   }
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+  aside {
+    display: none;
+  }
+  #before-md {
+    display: block;
+   }
+   #after-md {
+    display: none;
+   }
+}
