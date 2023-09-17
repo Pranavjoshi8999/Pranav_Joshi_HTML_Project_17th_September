@@ -90,6 +90,10 @@ aside {
  display: none;
 }
 
+.top{
+  margin-left: 55px;
+}
+
 
 
 @media screen and (max-width: 768px) {
